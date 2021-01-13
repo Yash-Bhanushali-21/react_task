@@ -1,9 +1,45 @@
 {
-  "name": "plunker-project",
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "src/index.js",
   "dependencies": {
-    "validator.js": "^2.0.4",
-    "validator": "^13.5.2",
-    "all-countries-and-cities-json": "^1.0.0",
-    "lodash.clonedeep": "^4.5.0"
-  }
+    "@ag-grid-community/all-modules": "25.0.0",
+    "@ag-grid-community/client-side-row-model": "25.0.0",
+    "@ag-grid-community/core": "25.0.0",
+    "@ag-grid-community/react": "25.0.0",
+    "@ag-grid-enterprise/column-tool-panel": "25.0.0",
+    "@ag-grid-enterprise/excel-export": "25.0.0",
+    "@ag-grid-enterprise/menu": "25.0.0",
+    "@types/jquery": "3.5.5",
+    "ag-grid-community": "25.0.0",
+    "ag-grid-enterprise": "25.0.0",
+    "ag-grid-react": "25.0.0",
+    "jQuery": "1.7.4",
+    "jquery": "3.5.1",
+    "jquey": "0.0.1-security",
+    "react": "17.0.0",
+    "react-datepicker": "3.3.0",
+    "react-dom": "17.0.0",
+    "react-scripts": "3.4.3"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
