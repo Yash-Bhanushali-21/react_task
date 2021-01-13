@@ -6,6 +6,7 @@ import { ColumnsToolPanelModule } from "@ag-grid-enterprise/column-tool-panel";
 import { AllCommunityModules } from "@ag-grid-community/all-modules";
 import "@ag-grid-community/core/dist/styles/ag-grid.css";
 import "@ag-grid-community/core/dist/styles/ag-theme-alpine.css";
+import "../style/style.css";
 
 const Output = (props) => {
   let rows = [...props.updatedRows];

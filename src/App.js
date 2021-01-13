@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./styles.css";
-import Grid from "./Grid.js";
-import Output from "./Output.js";
+import "./style/style.css";
+import Grid from "./components/Grid.js";
+import Output from "./components/Output.js";
 
 export default function App() {
   let [isReady, setIsReady] = useState(false);

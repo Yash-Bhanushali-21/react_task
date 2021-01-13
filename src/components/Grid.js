@@ -9,7 +9,7 @@ import { AllCommunityModules } from "@ag-grid-community/all-modules";
 import "@ag-grid-community/core/dist/styles/ag-grid.css";
 import "@ag-grid-community/core/dist/styles/ag-theme-alpine.css";
 import $ from "jquery";
-
+import "../style/style.css";
 //JSON data that will be used for dropdown
 var country = {
   Countries: [
