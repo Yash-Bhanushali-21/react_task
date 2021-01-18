@@ -10,6 +10,7 @@ import "@ag-grid-community/core/dist/styles/ag-grid.css";
 import "@ag-grid-community/core/dist/styles/ag-theme-alpine.css";
 import $ from "jquery";
 import "../style/style.css";
+import cloneDeep from "lodash.clonedeep";
 //JSON data that will be used for dropdown
 var country = {
   Countries: [
@@ -228,18 +229,16 @@ const Grid = (props) => {
    }*/
     /// NOTE: not passing the state directly.
     /// JS tends to make a shallow copy. thus, deep copy
-    ///using iteration for time being.
+    ///using iteration for time being OR
+    ///we use lodash for deepcopy.
 
     const updatedCol = colData.filter((word) => word.field !== "DeleteAction");
     let prevRow = rowData;
     console.log(prevRow);
-    let rowOp = [];
-    for (var i = 0; i < rowData.length; i++) {
-      rowOp.push(rowData[i]);
-    }
+    let rowOp = cloneDeep(rowData);
 
-    props.rSetter(rowOp);
-    props.cSetter(updatedCol);
+    props.rSetter(rowOp); //callback for row
+    props.cSetter(updatedCol); //callback fro col
     props.setVisible(true);
     console.log("output states are changed");
   };

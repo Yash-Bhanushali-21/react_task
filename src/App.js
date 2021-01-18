@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div>
       <Grid rSetter={setRData} cSetter={setCData} setVisible={setIsReady} />)
-      {isReady && <Output updatedRows={rData} updatedCols={cData} />}
+      {isReady ? <Output updatedRows={rData} updatedCols={cData} /> : null}
     </div>
   );
 }

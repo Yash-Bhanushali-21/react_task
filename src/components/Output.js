@@ -8,18 +8,23 @@ import "@ag-grid-community/core/dist/styles/ag-grid.css";
 import "@ag-grid-community/core/dist/styles/ag-theme-alpine.css";
 import "../style/style.css";
 
-const Output = (props) => {
-  let rows = [...props.updatedRows];
-  let cols = [...props.updatedCols];
+const Output = ({ updatedRows, updatedCols }) => {
+  let rows = [...updatedRows];
+  let cols = [...updatedCols];
+
   const [gridApi, setGridApi] = useState(null);
   const [gridColumnApi, setGridColumnApi] = useState(null);
+
+  console.log("state received here is");
+  console.log(rows);
+  console.log(cols);
   const onGridReady = (params) => {
     setGridApi(params.api);
     setGridColumnApi(params.columnApi);
   };
-  console.log("state received here is");
-  console.log(rows);
-  console.log(cols);
+
+  const valid = { borderColor: "white" }; //if all set, cell color as it is.
+  const inValid = { borderColor: "red" }; //else make borderColor red.
 
   return (
     <div id="myOutput" style={{ width: "100%" }} className="ag-theme-alpine">
@@ -31,8 +36,8 @@ const Output = (props) => {
           AllCommunityModules
         ]}
         rowMultiSelectWithClick={true}
-        onGridReady={onGridReady}
         domLayout={"autoHeight"}
+        onGridReady={onGridReady}
         defaultColDef={{
           flex: 1,
           minWidth: 150
