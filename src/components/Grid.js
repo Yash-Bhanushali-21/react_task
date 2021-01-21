@@ -169,7 +169,7 @@ const Grid = (props) => {
 
   //email Validation function.
   const validate = (text) => {
-    if (text.length === 0) {
+    if (text.length === 0 || text===undefined) {
       return { borderColor: "red" };
     }
     let first = new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(
